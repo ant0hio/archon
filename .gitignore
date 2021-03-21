@@ -1,4 +1,9 @@
-archon/settings.py
+# Django
+*.log
+*.pot
+.idea/
+archon/settings/local.py
+**/migrations/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
