@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -10,6 +11,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
   </head>
 
 
@@ -17,7 +19,7 @@
 
     <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
       <div class="container-fluid">
-          <a href="/" class="navbar-brand">АРХОНКА</a>
+          <a href="/" class="navbar-brand"><img src="{% static 'main/img/logo.png' %}"></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -28,15 +30,6 @@
               </li>
               <li class="nav-item">
                 <a href="{% url 'foto' %}" class="nav-link">Фото с камер</a>
-              </li>
-              <li class="nav-item">
-                <a href="/live" class="nav-link">Эфир (Flash)</a>
-              </li>
-              <li class="nav-item">
-                <a href="/youtube" class="nav-link">Эфир (Youtube)</a>
-              </li>
-              <li class="nav-item">
-                <a href="/info" class="nav-link">Информация</a>
               </li>
             </ul>
           </div>
