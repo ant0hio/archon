@@ -2,10 +2,16 @@
 {% load static %}
 
 {% block title %}
+
 фото с камер
 {% endblock %}
 
 {% block content %}
+{% if request.user.is_authenticated %}
     <p align="center"><img src="{% static 'main/img/vorota.jpg' %}" class="img-fluid" alt="Responsive image">
 
+        {% else %}
+        <h1>NO FOTO</h1>
+        {% endif %}
 {% endblock %}
+
