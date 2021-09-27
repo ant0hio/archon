@@ -21,9 +21,6 @@ def index(request):
 def foto(request):
     return render(request, 'main/foto.html')
 
-def login(request):
-    return render(request, 'main/login.html')
-
 
 class LoginUser(DataMixin, LoginView):
     form_class = AuthenticationForm
