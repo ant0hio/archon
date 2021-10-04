@@ -8,6 +8,9 @@ from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
+from django.http import HttpResponseForbidden
+from whitenoise.middleware import WhiteNoiseMiddleware
+
 
 from .forms import *
 from .models import *
@@ -40,4 +43,11 @@ def logout_user(request):
     logout(request)
     return redirect('login')
 
+
+class ProtectedStaticFileMiddleware(WhiteNoiseMiddleware):
+
+    def process_request(self, request):
+        if condition_met(request):
+           return super(WhiteNoiseMiddleware, self).process_request(request)
+           return HttpResponseForbidden("you are not authorized")
 
