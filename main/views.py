@@ -43,15 +43,3 @@ def logout_user(request):
     logout(request)
     return redirect('login')
 
-
-class ProtectedStaticFileMiddleware(WhiteNoiseMiddleware):
-        def process_request(self, request):
-            # check user authentication
-            if condition_met(request):
-               return super(WhiteNoiseMiddleware, self).process_request(request)
-            # condition false
-            return HttpResponseForbidden("you are not authorized")
-
-
-
-

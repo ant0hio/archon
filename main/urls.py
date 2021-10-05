@@ -17,6 +17,5 @@ urlpatterns = (
     path('foto/', views.foto, name='foto'),
     path('login/', LoginUser.as_view(), name='login'),
     path('logout/', logout_user, name='logout'),
-    #path('static/main/img/vorota.jpg', ProtectedStaticFileMiddleware, name='ProtectedStaticFileMiddleware'),
     url(r'^%s(?P<path>.*)$' % settings.MEDIA_URL[1:], protected_serve, {'document_root': settings.MEDIA_ROOT}),
 )
