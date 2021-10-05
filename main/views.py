@@ -22,6 +22,7 @@ from django.contrib.auth import logout, login
 def index(request):
     return render(request, 'main/index.html')
 
+
 @login_required
 def foto(request):
     return render(request, 'main/foto.html')
