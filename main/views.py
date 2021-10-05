@@ -9,7 +9,6 @@ from django.views.generic import ListView, DetailView, CreateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseForbidden
-from whitenoise.middleware import WhiteNoiseMiddleware
 
 
 from .forms import *
