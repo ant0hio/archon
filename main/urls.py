@@ -19,5 +19,5 @@ urlpatterns = (
     path('logout/', logout_user, name='logout'),
     url(r'^%s(?P<path>.*)$' % settings.MEDIA_URL[1:], protected_serve, {'document_root': settings.MEDIA_ROOT}),
     path('ups_dash', views.ups_dash, name='ups_dash'),
-    url('ups', view_ups, name='ups'),
+    path('ups', view_ups, name='ups'),
 )
