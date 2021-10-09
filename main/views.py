@@ -9,8 +9,8 @@ from django.views.generic import ListView, DetailView, CreateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseForbidden
-from whitenoise.middleware import WhiteNoiseMiddleware
-
+from .ups import *
+from . import ups
 
 from .forms import *
 from .models import *
@@ -44,14 +44,11 @@ def logout_user(request):
     return redirect('login')
 
 
-class ProtectedStaticFileMiddleware(WhiteNoiseMiddleware):
-        def process_request(self, request):
-            # check user authentication
-            if condition_met(request):
-               return super(WhiteNoiseMiddleware, self).process_request(request)
-            # condition false
-            return HttpResponseForbidden("you are not authorized")
+def ups_dash(request):
+    return render(request, 'main/ups_dash.html', {})
 
 
-
+def view_ups(request):
+    output = ups.upsresult
+    return render(request, 'main/ups_results.html', {'output': output})
 
