@@ -1,13 +1,10 @@
 {% extends 'main/base.html' %}
 {% load static %}
 
-{% block title %}
-Питание
-{% endblock %}
-
-{{ ups }}
+{% block title %}Питание{% endblock %}
 
 {% block content %}
+
 <div>
     <p>Start time: {{ ups.starttime }}</p>
     <p>Load: {{ ups.load }}</p>
