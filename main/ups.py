@@ -19,4 +19,4 @@ def upsresult():
         'charge': charge[1],
         'timeleft': timeleft[1]
     }
-    return ups
+    return out
