@@ -9,7 +9,6 @@ from django.views.generic import ListView, DetailView, CreateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseForbidden
-from .ups import *
 from . import ups
 
 from .forms import *
@@ -49,6 +48,11 @@ def ups_dash(request):
 
 
 def view_ups(request):
-    output = ups.upsresult
-    return render(request, 'main/ups_results.html', {'output': output})
+    output = ups.upsresult()
+    return render(request, 'main/ups_results.html', {
+        'starttime': output[9],
+        'load': output[13],
+        'charge': output[14],
+        'timeleft': output[15]
+    })
 
