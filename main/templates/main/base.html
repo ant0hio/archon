@@ -1,5 +1,5 @@
-{% load static %}
 <!DOCTYPE html>
+{% load static %}
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
@@ -14,9 +14,7 @@
   <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
   </head>
 
-
   <body>
-
     <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
       <div class="container-fluid">
           <a href="/" class="navbar-brand"><img src="{% static 'main/img/logo.png' %}"></a>
@@ -39,7 +37,7 @@
                 <a href="{% url 'ups' %}" class="nav-link">ИБП</a>
               </li>
                 <li class="nav-item">
-                <a href="{% url 'logout' %}" class="nav-link">Выйти</a>
+                <a href="{% url 'logout'%}?next={{request.path}}" class="nav-link">Выйти</a>
               </li>
                 {% else %}
                 <li class="nav-item">
