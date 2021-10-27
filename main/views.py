@@ -15,6 +15,10 @@ def foto(request):
 
 
 @login_required
+def video(request):
+    return render(request, 'main/video.html')
+
+@login_required
 def view_ups(request):
     return render(request, 'main/ups_results.html', {'ups': upsresult()})
 
