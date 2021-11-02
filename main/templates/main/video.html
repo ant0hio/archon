@@ -1,14 +1,30 @@
-{% extends 'main/base.html' %}
+<!DOCTYPE html>
 {% load static %}
-
-{% block title %}
-Фото с камер
-{% endblock %}
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-wight, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{% block title %}{% endblock %}</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+    <meta Cache-Control="no-store, no-cache, must-revalidate, max-age=0">
+    <meta Cache-Control="post-check=0, pre-check=0, false">
+    <meta Pragma="no-cache">
+    <meta Accept-Ranges="bytes">
+    <meta Connection="keep-alive">
+    <meta Content-type="video/mp4">
+  </head>
 
 {% block content %}
+<body>
 
-<video width="530" height="440" controls autoplay>
-  <source src="../media/video.mp4" type="video/mp4"> </source>
+<video width="530" height="440" controls autoplay class="img-fluid" alt="Responsive image">
+  <source src="../media/video.mp4" type="video/mp4">123</source>
 </video>
-
+</body>
 {% endblock %}

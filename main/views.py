@@ -2,6 +2,7 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from .ups import upsresult
+from .video import ffmpeg_start
 from django.views.static import serve
 
 
@@ -16,7 +17,8 @@ def foto(request):
 
 @login_required
 def video(request):
-    return render(request, 'main/video.html')
+    return render(request, 'main/video.html', {'video': ffmpeg_start()})
+
 
 @login_required
 def view_ups(request):
