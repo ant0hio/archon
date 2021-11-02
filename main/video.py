@@ -5,6 +5,6 @@ args = ["ffmpeg", "-rtsp_transport tcp", "-i \"rtsp://user:user@192.168.100.22:5
 
 
 def ffmpeg_start():
-    out = subprocess.check_output(args)
-    return out
+    video = subprocess.check_output(args)
+    return video
 
