@@ -1,0 +1,16 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}Видео{% endblock %}
+
+{% block content %}
+
+<div>
+    <p>Start time: {{ video }}</p>
+</div>
+
+<video width="530" height="440" controls autoplay class="img-fluid" alt="Responsive image">
+  <source src="../media/video.mp4" type="video/mp4">123</source>
+</video>
+
+{% endblock %}
