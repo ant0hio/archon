@@ -17,6 +17,7 @@ def foto(request):
 def temp(request):
     return render(request, 'main/temp.html')
 
+
 @login_required
 def view_ups(request):
     return render(request, 'main/ups_results.html', {'ups': upsresult()})
