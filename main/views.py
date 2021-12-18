@@ -14,7 +14,6 @@ def foto(request):
     return render(request, 'main/foto.html')
 
 
-@login_required
 def temp(request):
     return render(request, 'main/temp.html')
 
