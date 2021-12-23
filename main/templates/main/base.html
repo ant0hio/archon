@@ -37,6 +37,9 @@
                 <a href="{% url 'ups' %}" class="nav-link">ИБП</a>
               </li>
                 <li class="nav-item">
+                <a href="{% url 'temp' %}" class="nav-link">Температура</a>
+              </li>
+                <li class="nav-item">
                 <a href="{% url 'logout'%}?next={{request.path}}" class="nav-link">Выйти</a>
               </li>
                 {% else %}
